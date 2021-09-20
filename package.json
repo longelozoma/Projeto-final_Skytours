@@ -4,6 +4,7 @@
   "description": "Para agência de viagens, que precisam fornecer informações do passeios o Skytours é um é uma plataforma para ajudar os viajantes ao destino final, que permitem a dono agencia cadastra sobre passeios disponíveis.",
   "main": "index.js",
   "scripts": {
+    "start":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

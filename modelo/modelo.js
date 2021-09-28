@@ -7,10 +7,23 @@ const Schema = mongoose.Schema;
 
 // hotel, locais, preços, duração, cronograma.
 const agencia = new Schema({
-  hotel:{type:String},
-  local:{type:String},
-  preco:{type:Number},
-  reservas_disponiveis:{type:String}
+  hotel:{
+    type:String,
+    required:true,
+    index:{unique:true}
+  },
+  local:{
+    type:String,
+    required:true
+  },
+  preco:{
+    type:Number,
+    required:true
+  },
+  reservas_disponiveis:{
+    type:String,
+    required:true
+  }
 });
 
 module.exports = mongoose.model("Trilha",agencia);

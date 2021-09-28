@@ -41,5 +41,5 @@ rota(app)
 
 // rodando o servidor 
 app.listen(porta,function(){
-    console.log("O servidor rondando na url http://localhost:"+porta)
+    console.log("O servidor rondando na url http://localhost:"+porta +"/cadastro")
 })

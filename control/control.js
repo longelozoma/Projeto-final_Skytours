@@ -16,3 +16,16 @@ exports.cadastro = function(requisicao,resposta){
         }
     })
 }
+
+
+// criando get / busca 
+exports.busca = async function(requisicao,resposta){
+    try{
+    const hoteis = await Trilha.find();
+
+    return resposta.status(200).send({hoteis})
+    }catch(erro){
+        return resposta.status(404).send({erro})
+    }
+
+}

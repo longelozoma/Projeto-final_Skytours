@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-// hotel, locais, preços, duração, cronograma.
+// hotel, locais, preço, duração, cronograma.
 const agencia = new Schema({
   hotel:{
     type:String,

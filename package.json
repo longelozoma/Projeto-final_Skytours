@@ -1,5 +1,5 @@
 {
-  "name": "projeto-final_skytours",
+  "name": "Projeto-final_Skytours",
   "version": "1.0.0",
   "description": "Para agência de viagens, que precisam fornecer informações do passeios o Skytours é um é uma plataforma para ajudar os viajantes ao destino final, que permitem a dono agencia cadastra sobre passeios disponíveis.",
   "main": "index.js",
@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/longelozoma/Projeto-final_Skytours.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -19,7 +20,8 @@
   "homepage": "https://github.com/longelozoma/Projeto-final_Skytours#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.0.6",
-    "nodemon": "^2.0.13"
+    "mongoose": "^6.0.10",
+    "nodemon": "^2.0.13",
+    "swagger-ui-express": "^4.1.6"
   }
 }

@@ -29,3 +29,28 @@ exports.busca = async function(requisicao,resposta){
     }
 
 }
+
+// criando put / atualização 
+
+exports.atualizar = function(req,res){
+    Trilha.findOneAndUpdate({_id:req.params.id}, req.body, {new:true}, function(erro,trilha){
+        if(erro){
+            res.json({erro:"Não foi possivel atualizar"})
+        }else{
+            res.json({message: "preco e reservas atualizado"})
+        }
+    })
+}
+
+// criando delete / eliminando trilha
+
+exports.elinminar = function(req,res){
+    Trilha.deleteOne({_id:req.params.id}, function(erro,trilha){
+        if(erro){
+            res.json({erro:"trilha não encontrada"})
+
+        }else{
+            res.json({message:"trilha deletada com sucesso"})
+        }
+    })
+}

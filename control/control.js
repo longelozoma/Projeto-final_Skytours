@@ -37,7 +37,7 @@ exports.atualizar = function(req,res){
         if(erro){
             res.json({erro:"Não foi possivel atualizar"})
         }else{
-            res.json({message: "preco e reservas atualizado"})
+            res.json({message: " Dados atualizado"})
         }
     })
 }

@@ -9,12 +9,12 @@ const Schema = mongoose.Schema;
 const agencia = new Schema({
   hotel:{
     type:String,
-    // required:true,
+    
     index:{unique:true}
   },
   local:{
     type:String,
-    // required:true
+    
   },
   preco:{
     type:Number,

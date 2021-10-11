@@ -4,6 +4,11 @@ const mongoose = require('mongoose');
 const express = require('express');
 // importando ejs
 app.set('view engine', 'ejs')
+// conectando a base de dado usando sequelize
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize('postgres://postgres:example@db.com:5432/skytours') 
+
 
 // criando porta 
 const porta = 3000;

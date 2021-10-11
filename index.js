@@ -2,8 +2,7 @@
 const mongoose = require('mongoose');
 // importando express
 const express = require('express');
-// importando ejs
-app.set('view engine', 'ejs')
+
 
 // criando porta 
 const porta = 3000;

@@ -1,7 +1,11 @@
 // importando mongoose 
 const mongoose = require('mongoose');
 // importando express
+<<<<<<< HEAD
 const express = require('express'); 
+=======
+const express = require('express');
+>>>>>>> 2209d5c38a777e6417676e8a64b3472993570eae
 
 
 // criando porta 

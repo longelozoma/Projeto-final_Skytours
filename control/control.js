@@ -12,7 +12,7 @@ exports.cadastro = function(requisicao,resposta){
         if(erro){
             resposta.send(erro)
         }else{
-            resposta.send({certo})
+            resposta.status(201).json({certo})
         }
     })
 }

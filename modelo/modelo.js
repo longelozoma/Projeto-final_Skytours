@@ -9,12 +9,10 @@ const Schema = mongoose.Schema;
 const agencia = new Schema({
   hotel:{
     type:String,
-    
     index:{unique:true}
   },
   local:{
-    type:String,
-    
+    type:String
   },
   preco:{
     type:Number,
@@ -23,6 +21,10 @@ const agencia = new Schema({
   reservas_disponiveis:{
     type:String,
     required:true
+  },
+  data:{
+    type:Date,
+    default:Date.now
   }
 });
 

@@ -2,7 +2,8 @@
 const mongoose = require('mongoose');
 // importando express
 const express = require('express');
-
+const swaggerui = require("swagger-ui-express")
+const swaggerdoc = require("./swagger.json")
 
 // criando porta 
 const porta = 3000;
@@ -13,6 +14,8 @@ const app = express();
 // usando o express no formato json
 app.use(express.json());
 
+
+app.use("/api-docs", swaggerui.serve, swaggerui.setup(swaggerdoc))
 // requerindo modelos 
 const model = require("./modelo/modelo");
 

@@ -4,9 +4,9 @@ module.exports = function(app){
 
     // caminho de acesso 
     app.route("/cadastro").post(Trilha.cadastro);
-    app.route("/cadastro").get(Trilha.busca);
-    app.route("/:id").put(Trilha.atualizar)
-    app.route("/:id").delete(Trilha.elinminar)
+    app.route("/cadastros").get(Trilha.busca);
+    app.route("/cadastros/:id").put(Trilha.atualizar)
+    app.route("/cadastros/:id").delete(Trilha.elinminar)
 }
 
 

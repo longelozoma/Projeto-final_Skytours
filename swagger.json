@@ -1,0 +1,173 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "",
+      "version": "1.0.5",
+      "title": "SKY TOURS",
+      "contact": {
+        "email": "apiteam@swagger.io"
+      }
+    },
+      
+      "tags": [
+       
+        {
+          "name": "cadastro",
+          "description": "Access to Petstore orders"
+        }
+      ]
+       ,
+    "schemes": "http",
+    "paths": {
+      "/cadastro": {
+        "post": {
+          "tags": [
+            "cadastro"
+          ],
+          "summary": "Cadastrar hotel",
+          "description": "",
+          "operationId": "criandoCadastro",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json",
+            "application/xml"
+          ],
+          "parameters": [
+            {
+              "in": "body",
+              "name": "body",
+              "description": "Insira o nome do hotel",
+              "required": true,
+              "schema":{
+                  "$ref":"#/hoteis"
+              }
+            }
+          ],
+          "responses": {
+            "201": {
+              "description": "successful operation"
+            }
+          }
+        }
+      },
+      "/cadastros": {
+        "get": {
+          "tags": [
+            "cadastro"
+          ],
+          "summary": "Buscar hoteis",
+          "description": "",
+          "operationId": "cadastrados",
+          "produces": [
+            "application/json",
+            "application/xml"
+          ],
+          "parameters": [
+            
+          ],
+          "responses": {
+            "200": {
+              "description": "successful operation"
+            },
+            "400": {
+              "description": "Invalid username supplied"
+            },
+            "404": {
+              "description": "User not found"
+            }
+          }
+        }},
+        "/cadastros/{id}":{
+        "put": {
+          "tags": [
+            "cadastro"
+          ],
+          "summary": "Atualizar Hotel",
+          "description": "This can only be done by the logged in user.",
+          "operationId": "atualizarCadastro",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "Id do hotel",
+              "required": true,
+              "type": "string"
+            },{
+                "in": "body",
+                "name": "body",
+                "description": "Corpo de atualização",
+                "required": true,
+                "schema":{
+                    "$ref":"#/hoteis"
+                }
+              }
+          ],
+          "responses": {
+            "400": {
+              "description": "Invalid user supplied"
+            },
+            "404": {
+              "description": "User not found"
+            }
+          }
+        },
+        "delete": {
+          "tags": [
+            "cadastro"
+          ],
+          "summary": "Deletar hotel",
+          "description": "This can only be done by the logged in user.",
+          "operationId": "eliminarCadastro",
+          "produces": [
+            "application/json",
+            "application/xml"
+          ],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "The name that needs to be deleted",
+              "required": true,
+              "type": "string"
+            }
+          ],
+          "responses": {
+            "400": {
+              "description": "Invalid username supplied"
+            },
+            "404": {
+              "description": "User not found"
+            }
+          }
+        }
+     
+      }
+    }
+
+,
+"hoteis": {
+  "type": "object",
+  "properties": {
+    "hotel": {
+      "type": "string"
+    },
+    "local": {
+      "type": "string"
+    },
+    "preco": {
+      "type": "number"
+    },
+    "reservas_disponiveis": {
+      "type": "string"
+    }
+}
+  }
+  }

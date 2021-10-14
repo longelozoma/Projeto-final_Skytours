@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 
 const express = require('express'); 
 
-const express = require('express');
 
 const swaggerui = require("swagger-ui-express")
 const swaggerdoc = require("./swagger.json")

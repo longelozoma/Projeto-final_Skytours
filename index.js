@@ -1,7 +1,11 @@
 // importando mongoose 
 const mongoose = require('mongoose');
 // importando express
+
+const express = require('express'); 
+
 const express = require('express');
+
 const swaggerui = require("swagger-ui-express")
 const swaggerdoc = require("./swagger.json")
 
